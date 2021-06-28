@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Nelly Sugu | User-Lists</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="filter-buttons">
+        <div class="left-side-content">
+            <h2>Users List View</h2>
+        </div>
+        <div class="right-side-buttons">
+            <form id="search-form">
+                <input type="text" class="textbox" placeholder="Search User" autocomplete="off" onkeyup="searchSubmit()"
+                    id="searchInput">
+                <input title="Search" value="⌕" type="submit" class="button">
+            </form>
+            <div class="list-view-button active">List view</div>
+            <div class="grid-view-button">Grid view</div>
+        </div>
+    </div>
+    <div class="user-list-container">
+        <ul class="list list-view-filter" id="list-users">
+        </ul>
+        <div class="not-found-search"></div>
+        <div hidden id="spinner"></div>
+    </div>
+</body>
+<script src="./assets/js/index.js"></script>
+
+</html>

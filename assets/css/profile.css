@@ -1,0 +1,146 @@
+body {
+  font-family: "Helvetica";
+  background-color: #95acc1;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(17, 17, 19, 0.95);
+  border-radius: 35px;
+}
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.left-side-content {
+  opacity: 0.7;
+  margin: 0;
+  padding-top: 0.3em;
+}
+.header-navigation {
+  background-color: #95acc1;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  display: flex;
+  padding: 1em 0;
+  margin: 0 2em;
+  justify-content: space-between;
+}
+.back-button {
+  color: white;
+  border: 1px solid white;
+  padding: 0.8em;
+  font-size: 14px;
+  height: fit-content;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-left: auto;
+}
+.back-button:hover {
+  background: white;
+  color: #0e2439;
+}
+.post-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  justify-content: space-between;
+}
+.post-list-container {
+  margin: 0 2em;
+}
+li {
+  background-color: #1f364d;
+  color: white;
+  border-radius: 3px;
+  width: 47%;
+  cursor: pointer;
+  margin-bottom: 1em;
+  transition: 0.3s;
+}
+
+.post-list.list-view-filter {
+  flex-direction: row;
+  transition: 0.3s;
+}
+.post-list.list-view-filter li {
+  padding: 1em;
+}
+.post-title {
+  cursor: text;
+  text-transform: capitalize;
+}
+.post-body {
+  text-align: justify;
+  cursor: text;
+}
+.post-body:first-letter {
+  text-transform: capitalize;
+}
+/* Loader */
+#loader:not([hidden]) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#loader::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border: 2px solid #f3f3f3;
+  border-top: 3px solid #1f364d;
+  border-radius: 100%;
+  will-change: transform;
+  animation: spin 1s infinite ease-in-out;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 1024) {
+  li {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 768px) {
+  li {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 511px) {
+  .left-side-content {
+    font-size: 1em;
+  }
+  .back-button {
+    padding: 0.5em;
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 455px) {
+  .post-body {
+    text-align: unset;
+    margin-bottom: 0;
+    font-size: 0.9em;
+  }
+  .post-title {
+    margin-top: 0;
+    font-size: 1em;
+  }
+}
